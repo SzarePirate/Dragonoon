@@ -1,9 +1,12 @@
 public class Jednostki {
     public static void main(String[] args) {
         String greeting = "Tekst jest tylko przykładem i niczym więcej.";
-        System.out.println("Wybierz od 1 do 30 jaki fragment tekstu chcesz wczytać");
+        System.out.println("Wybierz początkowy fragment tekstu do wczytania od 1 do 30");
         Scanner in = new Scanner(System.in);
-        int i = in.nextInt();
-        int index = greeting.offsetByCodePoints(0, i);
-        int cp = greeting.codePointAt(index);
-        System.out.println(index);
+        int a = in.nextInt();
+        System.out.println("wybierz koncowy fragment tekstu do wczytania od 2 do 30");
+        int b = in.nextInt();
+       String done = greeting.substring(a, b);
+        System.out.println(done);
+    }
+}
